@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "aquire";
+  src: url("../assests/Aquire-BW0ox.woff2");
+}
+@font-face {
+  font-family: "gilroy";
+  src: url("../assests/Gilroy-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+}
+body {
+  font-family: "aquire";
+}
+.home {
+  background: linear-gradient(to top, #8e9eab, #eef2f3);
+  overflow: hidden;
+}
+
+.fir {
+  transform-origin: center;
+  /* rotate: 55deg; */
+  /* margin-top: 10px; */
+}
+
+.sec {
+  transform-origin: center;
+  /* rotate: -55deg; */
+  /* margin-top: -10px; */
+}
