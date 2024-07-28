@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import About from "./pages/About";
 import Contactus from "./pages/Contactus";
 import Register from "./pages/Register";
+import "./index.css";
 
 const App = () => {
   return (

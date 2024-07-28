@@ -7,9 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CardBody, CardContainer, CardItem } from "../components/UI/3d-card";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import LocomotiveScroll from "locomotive-scroll";
 
-const scroll = new LocomotiveScroll();
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
@@ -172,14 +170,14 @@ const Home = () => {
     <>
       <div
         style={{ backgroundSize: "100%" }}
-        className="hero min-h-screen bg-base-300 bg-cover  bg-center bg-[url('/assests/images/wallpaper1.jpg')]  bg-blend-overlay "
+        className="hero overflow-x-hidden min-h-screen bg-base-300 bg-cover  bg-center bg-[url('/assests/images/wallpaper1.jpg')]  bg-blend-overlay "
       >
         <h1 className=" heading1 font-extrabold text-white capitalize absolute top-96 text-7xl  transition duration-100 ease-linear ">
           stop wishing <br /> start{" "}
           <span className="text-orange-500 uppercase">doing</span>
         </h1>
         <div
-          className=" down1 transition duration-100 ease-linear w-full  bg-gradient-to-t from-[rgba(23,26,38,1)] from-29% via-[rgba(15,17,25,0.9298039284073004)] via-54%  via-[rgba(23,26,38,0.873781519443715) ] via-64% via-[rgba(23,26,38,0.708515413001138)] via-74% to-[rgba(0,0,0,0)] to-100%
+          className=" down1 transition duration-100 ease-linear w-full overflow-x-hidden  bg-gradient-to-t from-[rgba(23,26,38,1)] from-29% via-[rgba(15,17,25,0.9298039284073004)] via-54%  via-[rgba(23,26,38,0.873781519443715) ] via-64% via-[rgba(23,26,38,0.708515413001138)] via-74% to-[rgba(0,0,0,0)] to-100%
 
           h-20 absolute bottom-0 left-0 flex  px-10  gap-2   items-end shrink-0"
         >
