@@ -22,16 +22,7 @@ body {
   width: 100%;
   /* overflow: hidden; */
 }
-body {
-  font-family: "aquire";
-}
-.home {
-  background: linear-gradient(to top, #e6e6e6, #eef2f3);
-  overflow: hidden;
-}
 
-.fir,
-.sec {
-  transform-origin: 0% 0%;
-  /* transform: translate(0%, 0%); */
+::-webkit-scrollbar {
+  display: none;
 }

@@ -1,75 +1,22 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import React, { useRef, useState } from "react";
+import React from "react";
+import { CgMenuRightAlt } from "react-icons/cg";
 
 const Nav = () => {
-  const crossRef = useRef();
-  const { contextSafe } = useGSAP({ scope: crossRef });
-
-  const [isactive, setisActive] = useState(true);
-
-  const tl = gsap.timeline();
-
-  const cross = contextSafe(() => {
-    if (isactive) {
-      gsap.to(".fir", { rotate: "32deg" });
-      gsap.to(".sec", { rotate: "-33deg" });
-      tl.to(".menu", { left: "0%" });
-
-      setisActive(!isactive);
-    } else {
-      gsap.to(".fir", { rotate: "0deg", marginTop: "0px" });
-      gsap.to(".sec", { rotate: "0deg", marginTop: "0px" });
-      tl.to(".menu", { left: "100%" });
-
-      setisActive(!isactive);
-    }
-  });
-
-  //   console.log(cross);
-
   return (
-    <div
-      ref={crossRef}
-      className="h-20 relative w-full flex items-center bg-[#e6e6e6] justify-between"
-    >
-      <div className=" h-full md:w-1/2 flex items-center ml-4 ">
-        <h1 className="font-bold text-2xl leading-none">PANTHER-FITNESS</h1>
+    <div className="top-0 left-0 fixed flex  items-center justify-between w-full px-6 py-2 text-white z-50 ">
+      <div className=" cursor-pointer font-bold text-lg  ">
+        <h1>PANTHER FITNESS</h1>
       </div>
-      <div
-        onClick={cross}
-        className="md:w-1/2 items-center  flex  flex-col gap-3"
-      >
-        <button key={123} className="fir h-1 w-8 bg-black"></button>
-        <button key={354} className="sec h-1 w-8 bg-black"></button>
+      <div className="nav-list md:flex gap-5 hidden font-semibold cursor-pointer ">
+        <h1 className="w-12">Home</h1>
+        <h1>About Us</h1>
+        <h1>Classes</h1>
+        <h1>Services</h1>
+        <h1>Our team</h1>
       </div>
-      <div className="menu absolute left-full top-16 justify-between px-4 py-4 w-screen  flex flex-col gap-1">
-        <a
-          className="menu1 font-bold text-l font-[gilroy] bg-zinc-500 px-2 py-4 translate-y-[100%]"
-          href=""
-        >
-          hii
-        </a>
-        <a
-          className="menu2 font-bold text-l font-[gilroy]  bg-zinc-500 px-2 py-4 translate-y-[100%]"
-          href=""
-        >
-          hello
-        </a>
-        <a
-          className="menu3 font-bold text-l font-[gilroy]  bg-zinc-500 px-2 py-4 translate-y-[100%]"
-          href=""
-        >
-          pricing
-        </a>
-        <a
-          className="menu3 font-bold text-l font-[gilroy]  bg-zinc-500 px-2 py-4 translate-y-[100%]"
-          href=""
-        >
-          contact-us
-        </a>
+      <div>
+        <CgMenuRightAlt className="text-3xl" />
       </div>
-      <hr />
     </div>
   );
 };
