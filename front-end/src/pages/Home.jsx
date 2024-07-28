@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
+
 import { CardBody, CardContainer, CardItem } from "../components/UI/3d-card";
 const locomotiveScroll = new LocomotiveScroll();
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
