@@ -3,11 +3,13 @@ import Nav from "../components/Nav";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import LocomotiveScroll from "locomotive-scroll";
 
 import { CardBody, CardContainer, CardItem } from "../components/UI/3d-card";
-const locomotiveScroll = new LocomotiveScroll();
+
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import LocomotiveScroll from "locomotive-scroll";
+
+const locomotiveScroll = new LocomotiveScroll();
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
