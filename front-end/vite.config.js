@@ -7,6 +7,13 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ["react", "react-dom"],
+      onwarn(warning, warn) {
+        // Filter out specific warnings or handle them differently
+        if (warning.code === "THIS_IS_UNDEFINED") {
+          return;
+        }
+        warn(warning);
+      },
     },
   },
 });
