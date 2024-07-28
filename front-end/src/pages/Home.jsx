@@ -9,8 +9,7 @@ import { CardBody, CardContainer, CardItem } from "../components/UI/3d-card";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import LocomotiveScroll from "locomotive-scroll";
 
-const locomotiveScroll = new LocomotiveScroll();
-
+const scroll = new LocomotiveScroll();
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
