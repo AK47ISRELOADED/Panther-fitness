@@ -9,10 +9,12 @@ import About from "./pages/About";
 import Contactus from "./pages/Contactus";
 import Register from "./pages/Register";
 import "./index.css";
+import LocomotiveScroll from "locomotive-scroll";
 
 const App = () => {
+  const scroll = new LocomotiveScroll();
   return (
-    <div>
+    <div className="bg-[#171A26]">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

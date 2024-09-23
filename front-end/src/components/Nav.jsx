@@ -7,15 +7,33 @@ const Nav = () => {
       <div className=" cursor-pointer font-bold text-lg  ">
         <h1>PANTHER FITNESS</h1>
       </div>
-      <div className="nav-list md:flex gap-5 hidden font-semibold cursor-pointer ">
-        <h1 className="w-12">Home</h1>
-        <h1>About Us</h1>
-        <h1>Classes</h1>
-        <h1>Services</h1>
-        <h1>Our team</h1>
-      </div>
+
       <div>
-        <CgMenuRightAlt className="text-3xl" />
+        <div className="drawer drawer-end">
+          <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content">
+            {/* Page content here */}
+            <label htmlFor="my-drawer-4" className="drawer-button btn ">
+              <CgMenuRightAlt className="text-3xl" />
+            </label>
+          </div>
+          <div className="drawer-side">
+            <label
+              htmlFor="my-drawer-4"
+              aria-label="close sidebar"
+              className="drawer-overlay"
+            ></label>
+            <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+              {/* Sidebar content here */}
+              <li>
+                <a>Sidebar Item 1</a>
+              </li>
+              <li>
+                <a>Sidebar Item 2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
